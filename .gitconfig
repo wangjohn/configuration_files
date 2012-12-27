@@ -1,0 +1,15 @@
+[user]
+	email = wangjohn@mit.edu
+	name = wangjohn
+
+[alias]
+    st = status
+    ci = commit -v
+    cia = commit -va
+    hlog = log --date-order --graph --format=\"%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ad%Creset %C(red bold)%d%Creset%s\"
+    alog = log --date-order --all --graph --format=\"%C(green)%H%Creset %C(yellow)%an%Creset %C(blue bold)%ad%Creset %C(red bold)%d%Creset%s\"
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
+    topush = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat origin/master..HEAD
+    gopush = push origin master
+
