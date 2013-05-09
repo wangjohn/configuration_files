@@ -171,3 +171,6 @@ let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 "copy-paste from system clipboard.
 vmap <C-C> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
+
+" Python stuff
+autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
