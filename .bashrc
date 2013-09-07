@@ -91,3 +91,6 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
+
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+
