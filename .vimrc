@@ -1,4 +1,4 @@
-" Use Vim settings, rather then Vi settings (much better!).
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 set hidden
@@ -174,3 +174,7 @@ vmap <C-C> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call
 
 " Python stuff
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
+
+" NERDTree
+execute pathogen#infect()
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
