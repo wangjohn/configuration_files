@@ -170,6 +170,7 @@ let g:snippetsEmu_key = "<S-Tab>"
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
 "copy-paste from system clipboard.
+set pastetoggle=<F2>
 vmap <C-C> y:call system("xclip -i -selection clipboard", getreg("\""))<CR>:call system("xclip -i", getreg("\""))<CR>
 
 " Python stuff
