@@ -1,4 +1,4 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 set hidden

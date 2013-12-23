@@ -1,1 +1,8 @@
---type-add=markdown=.md
+--type-add
+js=.coffee
+--type-add
+js=.txt
+--type-set
+md=.md
+--type-add
+html=.handlebars
