@@ -179,3 +179,6 @@ autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 " NERDTree
 execute pathogen#infect()
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" NerdCommenter
+"map <Leader><Leader> <plug>NERDCommenterToggle
