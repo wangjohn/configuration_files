@@ -5,7 +5,6 @@ passwd
 # Symlink all the configuration files
 
 rm ~/.bashrc
-rm ~/.vimrc
 
 ln -s ~/configuration_files/.ackrc ~/.ackrc
 ln -s ~/configuration_files/.bashrc ~/.bashrc
