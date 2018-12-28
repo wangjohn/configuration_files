@@ -93,6 +93,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
+export GOPATH=$HOME/golang
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
