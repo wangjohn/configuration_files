@@ -1,5 +1,5 @@
 [user]
-  email = wangjohn@mit.edu
+  email = john.jian.wang@gmail.com
   name = wangjohn
 
 [alias]
@@ -13,6 +13,8 @@
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
   topush = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat origin/master..HEAD
   gopush = push origin master
+	pullall = "!f(){ git pull \"$@\" && git submodule update --init --recursive; }; f"
 
 [core]
   editor = vim
+	excludesfile = /Users/wangjohn/.gitignore
