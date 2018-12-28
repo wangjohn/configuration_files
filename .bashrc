@@ -94,6 +94,5 @@ fi
 
 export GOPATH=$HOME/golang
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$GOPATH/bin:/$PATH"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export FZF_DEFAULT_COMMAND='ag -g ""'
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
