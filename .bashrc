@@ -92,8 +92,8 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$PATH"
 export GOPATH=$HOME/golang
+export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$GOPATH/bin:/$PATH"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
