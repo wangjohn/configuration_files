@@ -19,6 +19,10 @@ set hlsearch
 set incsearch
 set viminfo='20,<1000,s1000
 
+set maxmemtot=10000
+set maxmem=10000
+set maxmempattern=10000
+
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
