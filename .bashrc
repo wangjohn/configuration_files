@@ -94,5 +94,19 @@ fi
 
 export GOPATH=$HOME/golang
 export PATH="$HOME/.rbenv/bin:$HOME/.rbenv/shims:$GOPATH/bin:/$PATH"
+export PATH="$HOME/Library/Python/2.7/bin:/$PATH"
 export FZF_DEFAULT_COMMAND='ag -g ""'
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+# Setting PATH for Python 3.8
+# The original version is saved in .bash_profile.pysave
+PATH="/Library/Frameworks/Python.framework/Versions/3.8/bin:${PATH}"
+export PATH
+
+# Auto complete for git branch names
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+
+# NVM related things
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
