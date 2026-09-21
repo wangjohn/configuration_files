@@ -18,4 +18,13 @@
 
 [core]
   editor = vim
-	excludesfile = /Users/wangjohn/.gitignore
+	excludesfile = ~/.gitignore
+[safe]
+	directory = /Users/johnwang/actions-runner/_work/benchplan/benchplan/app
+	directory = /Users/johnwang/actions-runner/_work/benchplan/benchplan/levenshtein
+	directory = /Users/johnwang/actions-runner/_work/benchplan/benchplan/levenshtein
+	directory = /Users/johnwang/actions-runner/_work/benchplan/benchplan/app
+	directory = /Users/johnwang/actions-runner/_work/benchplan/benchplan/app
+	directory = /Users/johnwang/actions-runner/_work/benchplan/benchplan/levenshtein
+	directory = /Users/johnwang/actions-runner/_work/benchplan/benchplan/levenshtein
+	directory = /Users/johnwang/actions-runner/_work/benchplan/benchplan/app
