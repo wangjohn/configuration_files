@@ -1,0 +1,5 @@
+# Global gitignore, symlinked to ~/.gitignore by setup.sh
+.DS_Store
+*.swp
+*.swo
+*~
