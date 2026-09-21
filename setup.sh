@@ -1,9 +1,26 @@
-# Symlink all the configuration files
+#!/bin/sh
+# Symlink the configuration files into $HOME.
+# Safe to re-run. Existing regular files are moved aside as <name>.bak.
+set -e
 
-rm ~/.bash_profile
+DIR="$(cd "$(dirname "$0")" && pwd)"
 
-ln -s ~/configuration_files/.bashrc ~/.bash_profile
-ln -s ~/configuration_files/.gitconfig ~/.gitconfig
-ln -s ~/configuration_files/.tmux.conf ~/.tmux.conf
-ln -s ~/configuration_files/.vimrc ~/.vimrc
-ln -s ~/configuration_files/.zshrc ~/.zshrc
+link() {
+  src="$DIR/$1"
+  dst="$HOME/$2"
+  if [ -e "$dst" ] && [ ! -L "$dst" ]; then
+    mv "$dst" "$dst.bak"
+    echo "moved existing $dst to $dst.bak"
+  fi
+  ln -sfn "$src" "$dst"
+  echo "linked $dst -> $src"
+}
+
+link .gitconfig        .gitconfig
+link .gitignore_global .gitignore
+link .tmux.conf        .tmux.conf
+link .vimrc            .vimrc
+link .zshrc            .zshrc
+
+echo
+echo "Done. Put machine-specific secrets in ~/.zshrc.local (not tracked)."
