@@ -1,4 +1,3 @@
-execute pathogen#infect()
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 set hidden
@@ -99,8 +98,6 @@ if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor
 endif
 
-let g:ackprg="ack-grep -H --nocolor --nogroup --column"
-
 " Color scheme
 colorscheme desert
 highlight NonText guibg=#060606
@@ -110,14 +107,7 @@ highlight Folded  guibg=#0A0A0A guifg=#9090D0
 set nonumber
 set numberwidth=5
 
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
-
-" Tags
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-
 " Python stuff
 autocmd Filetype python setlocal expandtab tabstop=4 shiftwidth=4
 
-setlocal omnifunc=go#complete#Complete
 set completeopt=longest,menuone
